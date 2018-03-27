@@ -3,7 +3,7 @@ import { createToken } from './token';
 export function createExtensionObject(manifest, index, role, isLinked, ownerID, channelId, secret) {
   return {
     authorName: manifest.author_name,
-    clientId: manifest.id,
+    clientId: manifest.id + ':' + index,
     description: manifest.description,
     iconUrl: manifest.icon_url,
     id: manifest.id + ':' + index,

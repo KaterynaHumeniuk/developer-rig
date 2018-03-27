@@ -71,7 +71,7 @@ export class Rig extends Component {
       selectedView: BROADCASTER_CONFIG,
       extension: createExtensionObject(
         this.state.manifest,
-        0,
+        'config',
         ViewerTypes.Broadcaster,
         '',
         this.state.userName,
@@ -86,7 +86,7 @@ export class Rig extends Component {
       selectedView: LIVE_CONFIG,
       extension: createExtensionObject(
         this.state.manifest,
-        0,
+        'liveConfig',
         ViewerTypes.Broadcaster,
         '',
         this.state.userName,

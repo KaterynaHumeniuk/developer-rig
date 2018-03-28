@@ -12,7 +12,7 @@ import { ViewerTypes } from '../constants/viewer_types';
 import { OverlaySizes } from '../constants/overlay_sizes';
 import { IdentityOptions } from '../constants/identity-options';
 import { RIG_ROLE } from '../constants/rig';
-const { ExtensionMode } = window['extension-coordinator'];
+const { ExtensionViewType, ExtensionMode } = window['extension-coordinator'];
 
 export class Rig extends Component {
   constructor(props) {
@@ -71,7 +71,7 @@ export class Rig extends Component {
       selectedView: BROADCASTER_CONFIG,
       extension: createExtensionObject(
         this.state.manifest,
-        'config',
+        ExtensionViewType.Config,
         ViewerTypes.Broadcaster,
         '',
         this.state.userName,
@@ -86,7 +86,7 @@ export class Rig extends Component {
       selectedView: LIVE_CONFIG,
       extension: createExtensionObject(
         this.state.manifest,
-        'liveConfig',
+        ExtensionViewType.LiveConfig,
         ViewerTypes.Broadcaster,
         '',
         this.state.userName,
